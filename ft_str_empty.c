@@ -6,11 +6,13 @@
 /*   By: pmarkaid <pmarkaid@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 11:18:31 by pmarkaid          #+#    #+#             */
-/*   Updated: 2024/04/20 11:18:36 by pmarkaid         ###   ########.fr       */
+/*   Updated: 2024/04/20 11:30:10 by pmarkaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	string_is_empty_or_whitespace(char *str)
+#include "libft.h"
+
+int	ft_str_empty(char *str)
 {
 	int	i;
 
