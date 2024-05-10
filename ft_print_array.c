@@ -6,18 +6,29 @@
 /*   By: pmarkaid <pmarkaid@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/18 14:56:42 by pmarkaid          #+#    #+#             */
-/*   Updated: 2024/02/18 15:51:50 by pmarkaid         ###   ########.fr       */
+/*   Updated: 2024/05/10 11:28:14 by pmarkaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * @brief  Prints each string in the given array to the standard output
+ * @note   Each string is printed on a new line.
+ *         The function assumes that the array is null-terminated.
+ * @param  array: char double pointer - an array of strings to be printed
+ * @retval None
+ */
 void	ft_print_array(char **array)
 {
 	size_t	i;
 
+	if (array == NULL)
+	{
+		ft_printf("Error: array is NULL\n");
+		return ;
+	}
 	i = 0;
-	ft_printf("printing array");
 	while (array[i] != NULL)
 		ft_printf("%s\n", array[i++]);
 }

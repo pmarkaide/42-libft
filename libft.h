@@ -6,7 +6,7 @@
 /*   By: pmarkaid <pmarkaid@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 12:08:37 by pmarkaid          #+#    #+#             */
-/*   Updated: 2024/04/20 11:30:13 by pmarkaid         ###   ########.fr       */
+/*   Updated: 2024/05/10 11:52:41 by pmarkaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,5 +89,6 @@ char	*ft_strcpy(char *dest, const char *src);
 char	*ft_strcat(char *dest, const char *src);
 char	*ft_strjoin(char const *s1, char const *s2, char *delim);
 int		ft_str_empty(char *str);
+char	*ft_strncpy(char *dest, const char *src, size_t n);
 
 #endif
