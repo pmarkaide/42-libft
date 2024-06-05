@@ -22,7 +22,7 @@ char	*ft_strjoin(char const *s1, char const *s2, char *delim)
 	total_len = 0;
 	total_len += ft_strlen(s1);
 	total_len += ft_strlen(s2);
-	if(delim)
+	if (delim)
 		total_len += ft_strlen(delim);
 	res = (char *)malloc((total_len + 1) * sizeof(char));
 	if (!res)
