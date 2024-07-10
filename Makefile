@@ -6,7 +6,7 @@
 #    By: pmarkaid <pmarkaid@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/24 12:10:27 by pmarkaid          #+#    #+#              #
-#    Updated: 2024/01/17 16:00:51 by pmarkaid         ###   ########.fr        #
+#    Updated: 2024/06/17 12:12:11 by pmarkaid         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,7 @@ SRC = \
 	ft_toupper.c \
 	ft_tolower.c \
 	ft_isascii.c \
+	ft_isspace.c \
 	ft_memset.c \
 	ft_bzero.c \
 	ft_strjoin.c \
@@ -62,7 +63,13 @@ SRC = \
 	ft_putptr_fd.c \
 	ft_strlenc.c \
 	ft_free.c \
-	get_next_line.c
+	get_next_line.c \
+	ft_print_array.c \
+	ft_strcat.c \
+	ft_strcpy.c \
+	ft_str_empty.c \
+	ft_strncpy.c \
+	ft_strcmp.c
 
 INCLUDES = .
 

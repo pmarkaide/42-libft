@@ -1,39 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pmarkaid <pmarkaid@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/31 08:27:43 by pmarkaid          #+#    #+#             */
-/*   Updated: 2024/02/22 20:39:45 by pmarkaid         ###   ########.fr       */
+/*   Created: 2024/06/17 12:10:53 by pmarkaid          #+#    #+#             */
+/*   Updated: 2024/06/17 12:11:15 by pmarkaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int	ft_atoi(const char *str)
+int	ft_strcmp(const char *s1, const char *s2)
 {
-	int			i;
-	int long	nb;
-	int			neg;
-
-	i = 0;
-	nb = 0;
-	neg = 1;
-	while (str[i] && (ft_isspace(str[i])))
-		i++;
-	if (str[i] == '-')
-		neg = -1;
-	if (str[i] == '-' || str[i] == '+')
-		i++;
-	while (str[i] && ft_isdigit(str[i]))
+	while (*s1 && (*s1 == *s2))
 	{
-		nb = 10 * nb + str[i++] - '0';
-		if (nb < 0 && neg < 0)
-			return (0);
-		else if (nb < 0 && neg > 0)
-			return (-1);
+		s1++;
+		s2++;
 	}
-	return (nb * neg);
+	return (*(unsigned char *)s1 - *(unsigned char *)s2);
 }

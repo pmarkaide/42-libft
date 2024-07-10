@@ -1,39 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pmarkaid <pmarkaid@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/31 08:27:43 by pmarkaid          #+#    #+#             */
-/*   Updated: 2024/02/22 20:39:45 by pmarkaid         ###   ########.fr       */
+/*   Created: 2024/02/22 20:45:23 by pmarkaid          #+#    #+#             */
+/*   Updated: 2024/02/22 20:45:31 by pmarkaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int	ft_atoi(const char *str)
+char	*ft_strcpy(char *dest, const char *src)
 {
-	int			i;
-	int long	nb;
-	int			neg;
+	int	i;
 
 	i = 0;
-	nb = 0;
-	neg = 1;
-	while (str[i] && (ft_isspace(str[i])))
-		i++;
-	if (str[i] == '-')
-		neg = -1;
-	if (str[i] == '-' || str[i] == '+')
-		i++;
-	while (str[i] && ft_isdigit(str[i]))
+	while (src[i] != '\0')
 	{
-		nb = 10 * nb + str[i++] - '0';
-		if (nb < 0 && neg < 0)
-			return (0);
-		else if (nb < 0 && neg > 0)
-			return (-1);
+		dest[i] = src[i];
+		i++;
 	}
-	return (nb * neg);
+	dest[i] = '\0';
+	return (dest);
 }

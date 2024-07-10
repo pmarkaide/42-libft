@@ -1,39 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pmarkaid <pmarkaid@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/31 08:27:43 by pmarkaid          #+#    #+#             */
-/*   Updated: 2024/02/22 20:39:45 by pmarkaid         ###   ########.fr       */
+/*   Created: 2024/02/22 20:44:54 by pmarkaid          #+#    #+#             */
+/*   Updated: 2024/02/22 20:45:07 by pmarkaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int	ft_atoi(const char *str)
+char	*ft_strcat(char *dest, const char *src)
 {
-	int			i;
-	int long	nb;
-	int			neg;
+	int	i;
+	int	j;
 
 	i = 0;
-	nb = 0;
-	neg = 1;
-	while (str[i] && (ft_isspace(str[i])))
+	j = 0;
+	while (dest[i] != '\0')
 		i++;
-	if (str[i] == '-')
-		neg = -1;
-	if (str[i] == '-' || str[i] == '+')
-		i++;
-	while (str[i] && ft_isdigit(str[i]))
-	{
-		nb = 10 * nb + str[i++] - '0';
-		if (nb < 0 && neg < 0)
-			return (0);
-		else if (nb < 0 && neg > 0)
-			return (-1);
-	}
-	return (nb * neg);
+	while (src[j] != '\0')
+		dest[i++] = src[j++];
+	dest[i] = '\0';
+	return (dest);
 }

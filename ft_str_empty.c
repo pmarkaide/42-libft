@@ -1,39 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_str_empty.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pmarkaid <pmarkaid@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/31 08:27:43 by pmarkaid          #+#    #+#             */
-/*   Updated: 2024/02/22 20:39:45 by pmarkaid         ###   ########.fr       */
+/*   Created: 2024/04/20 11:18:31 by pmarkaid          #+#    #+#             */
+/*   Updated: 2024/04/20 11:30:10 by pmarkaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+int	ft_str_empty(char *str)
 {
-	int			i;
-	int long	nb;
-	int			neg;
+	int	i;
 
 	i = 0;
-	nb = 0;
-	neg = 1;
-	while (str[i] && (ft_isspace(str[i])))
-		i++;
-	if (str[i] == '-')
-		neg = -1;
-	if (str[i] == '-' || str[i] == '+')
-		i++;
-	while (str[i] && ft_isdigit(str[i]))
+	if (str == NULL)
+		return (1);
+	while (str[i] != '\0')
 	{
-		nb = 10 * nb + str[i++] - '0';
-		if (nb < 0 && neg < 0)
+		if (!ft_isspace(str[i]))
 			return (0);
-		else if (nb < 0 && neg > 0)
-			return (-1);
+		i++;
 	}
-	return (nb * neg);
+	return (1);
 }
