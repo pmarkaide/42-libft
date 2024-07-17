@@ -10,12 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_char_array_len(char **array)
+int	ft_char_array_len(char **array)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while (array[i])
-        i++;
-    return i;
+	i = 0;
+	while (array[i])
+		i++;
+	return (i);
 }
