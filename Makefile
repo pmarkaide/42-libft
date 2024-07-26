@@ -6,7 +6,7 @@
 #    By: pmarkaid <pmarkaid@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/24 12:10:27 by pmarkaid          #+#    #+#              #
-#    Updated: 2024/07/17 12:49:15 by pmarkaid         ###   ########.fr        #
+#    Updated: 2024/07/26 16:00:04 by pmarkaid         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -71,7 +71,6 @@ SRC = \
 	ft_str_empty.c \
 	ft_strncpy.c \
 	ft_strcmp.c \
-	ft_int_array_len.c \
 	ft_char_array_len.c 
 
 INCLUDES = .
